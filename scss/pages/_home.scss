@@ -1,0 +1,10 @@
+// ***HOME PAGES****
+
+
+.home-bgImg-container{
+    // background-image: url(../../img/model-1.jpg);
+    // height: 100vh;
+    // background-size:cover;
+    // background-position: center;
+    @include bgImg(100vh,$pathNme1);
+}
