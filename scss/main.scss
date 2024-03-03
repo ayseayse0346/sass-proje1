@@ -8,7 +8,9 @@
 @import './components/footer','./components/nav','./components/responsive';
 
 // pages
-@import './pages/about','./pages/contact','./pages/home','./pages/projects.scss';
+@import './pages/about','./pages/contact','./pages/home','./pages/projects';
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"); //iconlar için footordaki font awsomdan yaptık
 
 body{
 font-family: $font-family;
@@ -21,6 +23,7 @@ line-height: 1;
 
 a{
     color: $text-color;
+    text-decoration: none;
 }
 h1,h2,h3{
     font-weight: 400;

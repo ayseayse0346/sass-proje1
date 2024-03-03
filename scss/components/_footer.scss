@@ -1,0 +1,53 @@
+// *****FOOTER******
+
+.link-style{  //biz bu style işemini extend için yaptık tanımladık diğer sayfalarda da bu özellikler işlesin diye
+    a{
+        padding: 0.4rem;
+        @include soft (1s);
+        &:hover{
+            color: $secondary-color;
+        }
+    }
+}
+
+
+
+footer.horizontal{
+    // border: 2px solid red;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem;
+    @extend .link-style;  //yukarıdaki olşturduğumuz özellikleri burda yedirdik
+
+}
+
+footer.vertical{
+    // border: solid 2px red;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 2rem;
+
+    // iconları dikey hale getirmek istiyorum
+    // display flex ve flex direction column yaparsak dikey hale gelirler.
+    // ama menüde sabit kalsın istiyorum o zaman position fixed bottom 1rem verdik ancak copyright yazısı yanına geldi bunu önlemek içinde ona da position fixed ve right 1rem verdik
+    .social-icons{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 1rem;
+        @extend .link-style;
+    }
+   .copyright{
+//   border: 2px solid red;
+
+    position: fixed;
+    right: 1rem ;
+    bottom: 1rem;
+    writing-mode:vertical-rl;
+   
+   }
+    
+}
